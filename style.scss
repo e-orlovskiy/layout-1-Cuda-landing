@@ -1,0 +1,50 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,300,300italic,regular,italic,600,600italic,700,700italic,900);
+
+$container-width: 1100px;
+$orange-color-btn: #eb7d4b;
+$green-color-btn: #17c2a4;
+$blue-color-btn: #30bae7;
+$font: 'Titillium Web';
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+ul {
+   li {
+      list-style: none;
+   }
+}
+
+a {
+   text-decoration: none;
+   color: #000;
+}
+
+
+.phiolet-section {
+   &__header {}
+
+   &__logo {}
+
+   &__navigation {}
+
+   &__main {}
+
+   &__.description {}
+
+   &__button {}
+}
+
+
+
+
+
+
+
+// НЕЗАВИСИМЫЕ БЛОКИ:
+.button {}
+
+._orange {}
