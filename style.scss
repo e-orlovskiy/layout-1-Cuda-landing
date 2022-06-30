@@ -16,6 +16,7 @@ $font: 'Titillium Web';
 ul {
    li {
       list-style: none;
+      text-transform: uppercase;
    }
 }
 
@@ -24,12 +25,17 @@ a {
    color: #fff;
 }
 
+body._lock {
+   overflow: hidden;
+}
+
 .wrapper {
    width: 100%;
-   height: 100%;
+   min-height: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-direction: column;
 }
 
 //----------------------- ФИОЛЕТОВАЯ СЕКЦИЯ ----------------------
@@ -49,72 +55,10 @@ a {
          padding: 57px 40px 145px 40px;
       }
 
-      @media screen and (max-width: 769px) {
-         height: 100vh;
-         padding: 57px 40px 54px 40px;
+      @media screen and (max-width: 767px) {
+         padding: 20px 40px 54px 40px;
       }
    }
-
-
-   &__header {
-      display: flex;
-      justify-content: space-between;
-
-      @media screen and (max-width: 769px) {
-         flex-direction: column;
-         align-items: center;
-      }
-   }
-
-   &__logo {
-      width: 118px;
-      height: auto;
-   }
-
-   &__navigation {
-      display: flex;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-   }
-
-   &__desktop-ul {
-      display: flex;
-
-      @media screen and (max-width: 769px) {
-         display: none;
-      }
-
-      li {
-         text-transform: uppercase;
-         font-size: 16px;
-         line-height: 18px;
-         font-weight: 400;
-
-
-         a {
-            padding: 6px 17px;
-            transition: 0.2s;
-
-            &:hover {
-               background: #553267;
-               border-radius: 5px;
-               background-size: 100%;
-            }
-
-         }
-      }
-
-      li:not(:last-child) {
-         margin-right: calc(45px - 34px);
-      }
-   }
-
-   &__m-burger {
-      display: block;
-   }
-
-
 
    &__main {
       padding: 145px 0 54px 0;
@@ -135,7 +79,7 @@ a {
          font-size: 30px;
       }
 
-      @media screen and (max-width: 769px) {
+      @media screen and (max-width: 767px) {
          line-height: 35px;
          font-size: 24px;
       }
@@ -146,13 +90,11 @@ a {
       }
    }
 
-
-
    &__button {
       display: flex;
       justify-content: center;
 
-      @media screen and (max-width: 769px) {
+      @media screen and (max-width: 767px) {
          height: 100%;
          align-items: center;
       }
@@ -164,6 +106,147 @@ a {
 
 
 // ---------------------- НЕЗАВИСИМЫЕ БЛОКИ ---------------------
+
+.header {
+   &__container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__logo {
+      position: relative;
+      width: 118px;
+      height: auto;
+
+   }
+}
+
+.menu {
+   &__icon {
+      display: none;
+
+      @media (max-width: 767px) {
+         z-index: 5;
+         display: block;
+         position: relative;
+         width: 45px;
+         height: 32.5px;
+         cursor: pointer;
+
+         & span,
+         &::before,
+         &::after {
+            position: absolute;
+            left: 0;
+            height: 20%;
+            width: 100%;
+            transition: all ease 0.3s;
+            background: #FFF;
+            border-radius: 20px;
+         }
+
+         &::before,
+         &::after {
+            content: '';
+         }
+
+         &::before {
+            top: 0px; //12.5
+            transform: rotate(0deg); //45
+         }
+
+         &._active::before {
+            top: 12.5px;
+            transform: rotate(45deg);
+         }
+
+         &::after {
+            bottom: 0px; //12.5
+            transform: rotate(0deg); //-45
+         }
+
+         &._active::after {
+            bottom: 12.5px;
+            transform: rotate(-45deg);
+         }
+
+         & span {
+            top: 50%;
+            transform: scale(1) translate(0px, -50%); // 0
+         }
+
+         &._active span {
+            top: 12.5px;
+            transform: scale(0) translate(0px, -50%); // 0
+         }
+
+      }
+   }
+
+   &__list {
+      display: flex;
+
+      li {
+         position: relative;
+
+         &:not(:last-child) {
+            margin-right: 10px;
+         }
+
+         a {
+            display: block;
+            padding: 5px 15px;
+            border-radius: 5px;
+            text-align: center;
+            transition: 0.3s;
+
+            &:hover {
+               background: #643a79;
+            }
+         }
+
+         @media (max-width: 767px) {
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+
+            &:not(:last-child) {
+               margin-bottom: 18.5px;
+            }
+         }
+      }
+
+      @media (max-width: 767px) {
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         height: 100%;
+      }
+   }
+
+   &__body {
+      @media (max-width: 767px) {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: -100%;
+         left: 0;
+         background: rgba(34, 0, 44, 0.95);
+         padding: 30px 30px 30px 30px;
+         transition: top 0.3s ease 0s;
+         overflow: auto;
+
+         &._active {
+            top: 0;
+         }
+      }
+   }
+}
+
 .button {
    font-size: 18px;
    line-height: 26px;
@@ -174,7 +257,8 @@ a {
    padding: 25px 90px;
 
    @media screen and (max-width: 615px) {
-      padding: 25px 40px;
+      padding: 25px 35px;
+      font-size: 16px;
    }
 
 }
@@ -184,3 +268,6 @@ a {
    border-radius: 5px;
    border-bottom: 5px solid #c86a40;
 }
+
+
+// BURGER
