@@ -48,6 +48,11 @@ a {
       @media screen and (max-width: 1200px) {
          padding: 57px 40px 145px 40px;
       }
+
+      @media screen and (max-width: 769px) {
+         height: 100vh;
+         padding: 57px 40px 54px 40px;
+      }
    }
 
 
@@ -107,8 +112,6 @@ a {
 
    &__m-burger {
       display: block;
-
-
    }
 
 
@@ -126,21 +129,37 @@ a {
       font-weight: 700;
       color: #f7f3ea;
       text-align: center;
+      max-width: 850px;
 
-      @media screen and (max-width:1025px) {
+      @media screen and (max-width: 1025px) {
          font-size: 30px;
       }
+
+      @media screen and (max-width: 769px) {
+         line-height: 35px;
+         font-size: 24px;
+      }
+
+      @media screen and (max-width: 615px) {
+         font-size: 20px;
+         line-height: 28px;
+      }
    }
+
+
 
    &__button {
       display: flex;
       justify-content: center;
+
+      @media screen and (max-width: 769px) {
+         height: 100%;
+         align-items: center;
+      }
    }
+
+
 }
-
-
-
-
 
 
 
@@ -153,6 +172,10 @@ a {
    color: #ffffff;
    text-transform: uppercase;
    padding: 25px 90px;
+
+   @media screen and (max-width: 615px) {
+      padding: 25px 40px;
+   }
 
 }
 
