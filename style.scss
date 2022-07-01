@@ -13,6 +13,10 @@ $font: 'Titillium Web';
    font-family: $font;
 }
 
+div {
+   box-sizing: border-box;
+}
+
 ul {
    li {
       list-style: none;
@@ -129,12 +133,15 @@ body._lock {
    &__services {
       display: flex;
       padding-top: 80px;
-
+      flex-wrap: wrap;
       justify-content: center;
+      max-width: 100%;
 
       div {
          width: 200px;
-         flex: 1 1 25%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
       }
 
       div:not(:last-child) {
@@ -152,14 +159,23 @@ body._lock {
 
    &__logo {
       text-align: center;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: calc(130px + 40px);
 
       img {
-         height: 125px
+         position: absolute;
+         top: 0;
+         left: 50%;
+         height: 130px;
+         transform: translate(-50%, 0);
       }
    }
 
    &__title {
-      padding-top: 55px;
+      padding-top: 25px;
       text-align: center;
       font-size: 24px;
       line-height: 18px;
