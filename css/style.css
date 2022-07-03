@@ -321,6 +321,97 @@ body._lock {
   color: #ffffff;
 }
 
+.grey-section {
+  width: 100%;
+  background: #e7f1f8;
+}
+
+.grey-section__container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 120px 0 125px 0;
+}
+
+.grey-section__caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 80px;
+}
+
+.grey-section__team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.grey-section__team > div {
+  max-width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grey-section__team > div:not(:last-child) {
+  margin-right: 80px;
+}
+
+.grey-section__logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #878787;
+  margin-bottom: 40px;
+}
+
+.grey-section__name {
+  font-size: 24px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #27283d;
+  margin-bottom: 15px;
+}
+
+.grey-section__profession {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #30bae7;
+  margin-bottom: 27px;
+}
+
+.grey-section__description {
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: #3c4761;
+}
+
 .header__container {
   max-width: 1100px;
   margin: 0 auto;
@@ -401,6 +492,15 @@ body._lock {
   letter-spacing: 0.02em;
   color: #ffffff;
   text-align: center;
+}
+
+._black {
+  color: #3c4761;
+}
+
+._black-line {
+  background: #bdd1df;
+  opacity: 0.74;
 }
 
 .menu__icon {

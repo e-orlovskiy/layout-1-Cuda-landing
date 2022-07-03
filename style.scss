@@ -107,7 +107,7 @@ body._lock {
 
 }
 
-//----------------------- ЗЕЛЕНАЯ СЕКЦИЯ ----------------------
+//------------------------- ЗЕЛЕНАЯ СЕКЦИЯ -----------------------
 
 .green-section {
    width: 100%;
@@ -246,6 +246,78 @@ body._lock {
 
 }
 
+//-------------------------- СЕРАЯ СЕКЦИЯ ------------------------
+
+.grey-section {
+   width: 100%;
+   background: #e7f1f8;
+
+   &__container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 120px 0 125px 0;
+   }
+
+   &__caption {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 80px;
+   }
+
+   &__team {
+      display: flex;
+      justify-content: center;
+
+      >div {
+         max-width: 200px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      >div:not(:last-child) {
+         margin-right: 80px;
+      }
+   }
+
+   &__logo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: #878787;
+      margin-bottom: 40px;
+   }
+
+   &__name {
+      font-size: 24px;
+      line-height: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: #27283d;
+      margin-bottom: 15px;
+   }
+
+   &__profession {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: #30bae7;
+      margin-bottom: 27px;
+   }
+
+   &__description {
+      text-align: center;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      color: #3c4761;
+   }
+}
 
 // ---------------------- НЕЗАВИСИМЫЕ БЛОКИ ---------------------
 
@@ -323,6 +395,15 @@ body._lock {
       color: #ffffff;
       text-align: center;
    }
+}
+
+._black {
+   color: #3c4761;
+}
+
+._black-line {
+   background: #bdd1df;
+   opacity: 0.74;
 }
 
 // ---------------------- БУРГЕР ---------------------
