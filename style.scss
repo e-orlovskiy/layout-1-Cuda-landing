@@ -122,11 +122,11 @@ body._lock {
       align-items: center;
 
       @media (max-width: 767px) {
-         padding: 50px 40px;
+         padding: 50px 40px 0px 40px;
       }
 
       @media (max-width: 560px) {
-         padding: 50px 20px;
+         padding: 50px 20px 0px 20px;
       }
 
       @media screen and (max-width: 500px) {
@@ -158,7 +158,6 @@ body._lock {
          width: 200px;
          display: flex;
          flex-direction: column;
-
 
          @media (max-width: 1024px) {
             flex: 0 1 50%;
@@ -255,7 +254,19 @@ body._lock {
    &__container {
       max-width: 1040px;
       margin: 0 auto;
-      padding: 120px 0 125px 0;
+      padding: 120px 40px 125px 40px;
+
+      @media (max-width: 1024px) {
+         padding: 120px 40px 40px 40px;
+      }
+
+      @media (max-width: 767px) {
+         padding: 40px 40px 0 40px;
+      }
+
+      @media (max-width: 680px) {
+         padding: 40px 0 0px 0;
+      }
    }
 
    &__caption {
@@ -269,16 +280,39 @@ body._lock {
    &__team {
       display: flex;
       justify-content: center;
+      flex-wrap: no-wrap;
+
+      @media (max-width: 1024px) {
+         flex-wrap: wrap;
+      }
 
       >div {
-         max-width: 200px;
          display: flex;
          flex-direction: column;
          align-items: center;
+         width: 200px;
+
+         @media (max-width: 1024px) {
+            align-items: space-between;
+            flex: 1 1 50%;
+            margin-bottom: 50px;
+         }
+
+         @media (max-width: 500px) {
+            flex: 0 1 100%;
+         }
       }
 
       >div:not(:last-child) {
          margin-right: 80px;
+
+         @media (max-width: 1200px) {
+            margin-right: 45px;
+         }
+
+         @media (max-width: 1024px) {
+            margin-right: 0;
+         }
       }
    }
 
@@ -316,8 +350,78 @@ body._lock {
       font-weight: 300;
       letter-spacing: 0.02em;
       color: #3c4761;
+      max-width: 200px;
    }
 }
+
+//-------------------------- БЕЛАЯ СЕКЦИЯ ------------------------
+.white-section {
+   width: 100%;
+   background: #FFF;
+
+   &__container {
+      padding: 120px 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__caption {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      >.caption__subtitle {
+         max-width: 650px;
+      }
+   }
+
+   &__progress {
+      padding: 84px 0 0 0;
+      display: flex;
+      justify-content: center;
+
+      >div:not(:last-child) {
+         margin-right: 120px;
+      }
+
+
+   }
+
+
+
+   &__progress-circle {
+      position: relative;
+      width: 160px;
+      height: 160px;
+      background: #dfe8ed;
+      border-radius: 50%;
+
+      &:before {
+         content: '';
+         position: absolute;
+         width: 135px;
+         height: 135px;
+         border-radius: 50%;
+         background: #FFF;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+
+      &:after {}
+   }
+
+
+
+}
+
+
+
+
+.white-section__prgoress-title {}
+
 
 // ---------------------- НЕЗАВИСИМЫЕ БЛОКИ ---------------------
 
@@ -370,6 +474,10 @@ body._lock {
       padding-bottom: 21px;
       text-align: center;
 
+      @media (max-width: 675px) {
+         font-size: 35px;
+      }
+
       @media (max-width: 600px) {
          font-size: 30px;
       }
@@ -387,7 +495,7 @@ body._lock {
    }
 
    &__subtitle {
-      padding-top: 17px;
+      padding: 17px 20px 0 20px;
       font-size: 18px;
       line-height: 26px;
       font-weight: 400;
@@ -404,6 +512,32 @@ body._lock {
 ._black-line {
    background: #bdd1df;
    opacity: 0.74;
+}
+
+.social {
+   display: flex;
+   justify-content: center;
+   margin-top: 15px;
+
+   >a {
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: #bdd1df;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+
+      >i {
+         font-size: 16px;
+      }
+   }
+
+   >a:not(:last-child) {
+      margin-right: 10px;
+
+   }
 }
 
 // ---------------------- БУРГЕР ---------------------
