@@ -724,6 +724,12 @@ body._lock {
           flex-direction: column;
 }
 
+@media (max-width: 767px) {
+  .gold-section__container {
+    padding: 40px 20px;
+  }
+}
+
 .gold-section__caption {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -776,6 +782,19 @@ body._lock {
   font-weight: 400;
   letter-spacing: 0.02em;
   color: #393939;
+  -webkit-transition: 0.2s background;
+  transition: 0.2s background;
+}
+
+@media (max-width: 500px) {
+  .gold-section__link {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+}
+
+.gold-section__link:hover {
+  background: #FFF;
 }
 
 .gold-section__works {
@@ -800,12 +819,43 @@ body._lock {
   margin-bottom: 60px;
 }
 
-.gold-section__works > div > div {
-  margin-bottom: 32px;
+@media (max-width: 1150px) {
+  .gold-section__works > div {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 960px) {
+  .gold-section__works > div {
+    max-width: none;
+    margin: 40px 0 0 0 !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .gold-section__works > div:first-child {
+    margin: 0px !important;
+  }
 }
 
 .gold-section__works > div:nth-child(odd) {
   margin-right: 20px;
+}
+
+@media (max-width: 960px) {
+  .gold-section__works > div:last-child {
+    margin-bottom: 40px !important;
+  }
+}
+
+.gold-section__works > div > div {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 960px) {
+  .gold-section__works > div > div {
+    margin-bottom: 5px;
+  }
 }
 
 .gold-section__works > div > div > img {
@@ -968,10 +1018,22 @@ body._lock {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 50%;
+  -webkit-transition: 0.2s background;
+  transition: 0.2s background;
+}
+
+.social > a:hover {
+  background: #FFF;
+}
+
+.social > a:hover > i {
+  color: #bdd1df;
 }
 
 .social > a > i {
   font-size: 16px;
+  -webkit-transition: 0.2s color;
+  transition: 0.2s color;
 }
 
 .social > a:not(:last-child) {

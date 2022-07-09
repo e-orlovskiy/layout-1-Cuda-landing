@@ -42,8 +42,7 @@ body._lock {
    flex-direction: column;
 }
 
-//----------------------- ФИОЛЕТОВАЯ СЕКЦИЯ ----------------------
-
+//* --------------------- ФИОЛЕТОВАЯ СЕКЦИЯ ----------------------
 .phiolet-section {
    background: #87509c;
    width: 100%;
@@ -107,8 +106,7 @@ body._lock {
 
 }
 
-//------------------------- ЗЕЛЕНАЯ СЕКЦИЯ -----------------------
-
+//* ----------------------- ЗЕЛЕНАЯ СЕКЦИЯ -----------------------
 .green-section {
    width: 100%;
    background: #17c2a4;
@@ -237,8 +235,7 @@ body._lock {
 
 }
 
-//-------------------------- СЕРАЯ СЕКЦИЯ ------------------------
-
+//* ------------------------ СЕРАЯ СЕКЦИЯ ------------------------
 .grey-section {
    width: 100%;
    background: #e7f1f8;
@@ -346,7 +343,7 @@ body._lock {
    }
 }
 
-//-------------------------- БЕЛАЯ СЕКЦИЯ ------------------------
+//* ------------------------ БЕЛАЯ СЕКЦИЯ ------------------------
 .white-section {
    width: 100%;
    background: #FFF;
@@ -529,8 +526,7 @@ body._lock {
    }
 }
 
-//------------------------- ЗОЛОТАЯ СЕКЦИЯ -----------------------
-
+//* ----------------------- ЗОЛОТАЯ СЕКЦИЯ -----------------------
 .gold-section {
    width: 100%;
    background: #ffdd99;
@@ -541,6 +537,10 @@ body._lock {
       padding: 120px 20px 110px 20px;
       display: flex;
       flex-direction: column;
+
+      @media (max-width: 767px) {
+         padding: 40px 20px;
+      }
    }
 
    &__caption {
@@ -579,6 +579,16 @@ body._lock {
       font-weight: 400;
       letter-spacing: 0.02em;
       color: #393939;
+      transition: 0.2s background;
+
+      @media (max-width: 500px) {
+         padding: 8px 20px;
+         font-size: 16px;
+      }
+
+      &:hover {
+         background: #FFF;
+      }
    }
 
    &__works {
@@ -591,15 +601,42 @@ body._lock {
       >div {
          flex: 1 1 calc(50%-20px);
          margin-bottom: 60px;
-      }
 
-      >div>div {
-         margin-bottom: 32px;
+         @media (max-width: 1150px) {
+            max-width: 450px;
+         }
+
+         @media (max-width: 960px) {
+            max-width: none;
+            margin: 40px 0 0 0 !important;
+         }
+
+         &:first-child {
+            @media (max-width: 960px) {
+               margin: 0px !important;
+            }
+         }
       }
 
       >div:nth-child(odd) {
          margin-right: 20px;
       }
+
+      >div:last-child {
+         @media (max-width: 960px) {
+            margin-bottom: 40px !important;
+         }
+      }
+
+      >div>div {
+         margin-bottom: 10px;
+
+         @media (max-width: 960px) {
+            margin-bottom: 5px;
+         }
+      }
+
+
 
       >div>div>img {
          width: 100%;
@@ -624,33 +661,10 @@ body._lock {
    }
 }
 
+//* ----------------------- РОЗОВАЯ СЕКЦИЯ -----------------------
 
 
-
-
-
-.gold-section__isometric {}
-
-.gold-section__img-block {}
-
-
-
-.gold-section__time {}
-
-.gold-section__viro {}
-
-.gold-section__blog {}
-
-
-
-.button {}
-
-._green {}
-
-
-
-
-// ---------------------- НЕЗАВИСИМЫЕ БЛОКИ ---------------------
+//! ---------------------- НЕЗАВИСИМЫЕ БЛОКИ ---------------------
 
 .header {
    &__container {
@@ -769,9 +783,19 @@ body._lock {
       justify-content: center;
       align-items: center;
       border-radius: 50%;
+      transition: 0.2s background;
+
+      &:hover {
+         background: #FFF;
+
+         >i {
+            color: #bdd1df;
+         }
+      }
 
       >i {
          font-size: 16px;
+         transition: 0.2s color;
       }
    }
 
