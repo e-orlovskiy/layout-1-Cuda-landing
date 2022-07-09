@@ -662,7 +662,83 @@ body._lock {
 }
 
 //* ----------------------- РОЗОВАЯ СЕКЦИЯ -----------------------
+.pink-section {
+   width: 100%;
+   background: #d74680;
 
+   &__container {
+      padding: 120px 0px;
+      max-width: 1105px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__caption {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 65px;
+   }
+
+
+   &__reviews {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+
+   &__review-container {
+      flex: 1 1 50%;
+      display: flex;
+
+      // ?maybe change
+      &:nth-child(1),
+      &:nth-child(2) {
+         margin-bottom: 145px;
+      }
+   }
+
+   &__logo {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: #787878;
+      margin-right: 45px;
+   }
+
+   &__text {
+      max-width: 360px;
+   }
+
+   &__comment {
+      font-size: 21px;
+      line-height: 31px;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      margin-bottom: 25px;
+   }
+
+   &__name {
+      font-size: 24px;
+      line-height: 26px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+   }
+
+   &__speciality {
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: #ffdd99;
+   }
+}
 
 //! ---------------------- НЕЗАВИСИМЫЕ БЛОКИ ---------------------
 
@@ -766,6 +842,11 @@ body._lock {
 
 ._gold-line {
    background-color: #e5c37f;
+   opacity: 1;
+}
+
+._pink-line {
+   background-color: #b93c6e;
    opacity: 1;
 }
 

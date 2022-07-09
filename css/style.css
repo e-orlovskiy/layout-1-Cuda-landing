@@ -876,6 +876,104 @@ body._lock {
   padding-bottom: 0px !important;
 }
 
+.pink-section {
+  width: 100%;
+  background: #d74680;
+}
+
+.pink-section__container {
+  padding: 120px 0px;
+  max-width: 1105px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pink-section__caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 65px;
+}
+
+.pink-section__reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pink-section__review-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pink-section__review-container:nth-child(1), .pink-section__review-container:nth-child(2) {
+  margin-bottom: 145px;
+}
+
+.pink-section__logo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #787878;
+  margin-right: 45px;
+}
+
+.pink-section__text {
+  max-width: 360px;
+}
+
+.pink-section__comment {
+  font-size: 21px;
+  line-height: 31px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.pink-section__name {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.pink-section__speciality {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #ffdd99;
+}
+
 .header__container {
   max-width: 1100px;
   margin: 0 auto;
@@ -990,6 +1088,11 @@ body._lock {
 
 ._gold-line {
   background-color: #e5c37f;
+  opacity: 1;
+}
+
+._pink-line {
+  background-color: #b93c6e;
   opacity: 1;
 }
 
