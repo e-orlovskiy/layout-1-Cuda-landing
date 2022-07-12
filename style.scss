@@ -705,15 +705,10 @@ body._lock {
          }
 
          @media (max-width: 450px) {
-
-
-
             >span:nth-child(1) {
                margin-bottom: 0px
             }
          }
-
-
       }
    }
 
@@ -738,7 +733,7 @@ body._lock {
       // ?maybe change
       &:nth-child(1),
       &:nth-child(2) {
-         margin-bottom: 145px;
+         margin-bottom: 80px;
 
          @media (max-width: 1024px) {
             margin-bottom: 0;
@@ -827,6 +822,109 @@ body._lock {
       }
    }
 }
+
+//! ----------------------- СИНЯЯ СЕКЦИЯ -----------------------
+
+.blue-section {
+   width: 100%;
+   background: #3c5499;
+
+   &__container {
+      max-width: 870px;
+      margin: 0 auto;
+      padding: 120px 0;
+   }
+
+   &__caption {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 75px;
+   }
+
+   &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      >form {
+         width: 100%;
+      }
+   }
+
+   &__name-and-email {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+
+      &>label {
+         width: 100%;
+         position: relative;
+         overflow: hidden;
+
+         >input {
+            width: 100%;
+            height: 56px;
+            outline: none;
+            font-size: 18px;
+            padding: 0 25px 0 25px;
+            background: #273a71;
+            border: none;
+            border-radius: 5px;
+            color: #FFF;
+         }
+
+         >input:invalid+.blue-section__input-text {
+            display: inline;
+            color: rgba(255, 255, 255, 0.734)
+         }
+
+
+      }
+
+      &>label:first-child {
+         margin-right: 30px;
+      }
+   }
+
+   &__input-text {
+      z-index: 10;
+      left: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: text;
+      position: absolute;
+      width: 100%;
+      display: none;
+      color: #FFF;
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 400;
+      color: #ffffff;
+
+      >span {
+         font-family: Arial;
+         font-size: 16px;
+         color: #ff4444;
+      }
+   }
+}
+
+.blue-section__name {}
+
+.blue-section__input-text {}
+
+.blue-section__email {}
+
+.blue-section__message {}
+
+.blue-section__button {}
+
+.button {}
+
+._blue {}
+
+
 
 //! ---------------------- НЕЗАВИСИМЫЕ БЛОКИ ---------------------
 
@@ -935,6 +1033,11 @@ body._lock {
 
 ._pink-line {
    background-color: #b93c6e;
+   opacity: 1;
+}
+
+._blue-line {
+   background: #273a71;
    opacity: 1;
 }
 

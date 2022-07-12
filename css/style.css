@@ -990,7 +990,7 @@ body._lock {
 }
 
 .pink-section__review-container:nth-child(1), .pink-section__review-container:nth-child(2) {
-  margin-bottom: 145px;
+  margin-bottom: 80px;
 }
 
 @media (max-width: 1024px) {
@@ -1092,6 +1092,108 @@ body._lock {
             order: 2;
     margin: 0 auto;
   }
+}
+
+.blue-section {
+  width: 100%;
+  background: #3c5499;
+}
+
+.blue-section__container {
+  max-width: 870px;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+.blue-section__caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 75px;
+}
+
+.blue-section__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blue-section__form > form {
+  width: 100%;
+}
+
+.blue-section__name-and-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.blue-section__name-and-email > label {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.blue-section__name-and-email > label > input {
+  width: 100%;
+  height: 56px;
+  outline: none;
+  font-size: 18px;
+  padding: 0 25px 0 25px;
+  background: #273a71;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+}
+
+.blue-section__name-and-email > label > input:invalid + .blue-section__input-text {
+  display: inline;
+  color: rgba(255, 255, 255, 0.734);
+}
+
+.blue-section__name-and-email > label:first-child {
+  margin-right: 30px;
+}
+
+.blue-section__input-text {
+  z-index: 10;
+  left: 25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: text;
+  position: absolute;
+  width: 100%;
+  display: none;
+  color: #FFF;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.blue-section__input-text > span {
+  font-family: Arial;
+  font-size: 16px;
+  color: #ff4444;
 }
 
 .header__container {
@@ -1213,6 +1315,11 @@ body._lock {
 
 ._pink-line {
   background-color: #b93c6e;
+  opacity: 1;
+}
+
+._blue-line {
+  background: #273a71;
   opacity: 1;
 }
 
