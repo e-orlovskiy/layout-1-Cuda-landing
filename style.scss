@@ -11,6 +11,7 @@ $font: 'Titillium Web';
    margin: 0;
    box-sizing: border-box;
    font-family: $font;
+
 }
 
 div {
@@ -582,7 +583,7 @@ body._lock {
       transition: 0.2s background;
 
       @media (max-width: 500px) {
-         padding: 8px 20px;
+         padding: 5px 10px;
          font-size: 16px;
       }
 
@@ -652,6 +653,10 @@ body._lock {
       letter-spacing: 0.02em;
       color: #393939;
       text-align: center;
+
+      @media (max-width: 500px) {
+         font-size: 16px;
+      }
    }
 
 
@@ -787,11 +792,11 @@ body._lock {
       @media (max-width: 1024px) {
          order: 3;
          text-align: center;
-
-
          margin: 10px 0 50px 0;
+      }
 
-
+      @media (max-width: 767px) {
+         font-size: 16px;
       }
    }
 
@@ -833,6 +838,14 @@ body._lock {
       max-width: 870px;
       margin: 0 auto;
       padding: 120px 0;
+
+      @media (max-width: 1024px) {
+         padding: 120px 20px;
+      }
+
+      @media (max-width: 767px) {
+         padding: 50px 20px 30px 20px;
+      }
    }
 
    &__caption {
@@ -840,6 +853,10 @@ body._lock {
       flex-direction: column;
       align-items: center;
       margin-bottom: 75px;
+
+      @media (max-width: 500px) {
+         margin-bottom: 40px;
+      }
    }
 
    &__form {
@@ -857,10 +874,19 @@ body._lock {
       justify-content: space-between;
       margin-bottom: 25px;
 
+      @media (max-width: 700px) {
+         flex-direction: column;
+         margin-bottom: 0;
+      }
+
       &>label {
          width: 100%;
          position: relative;
          overflow: hidden;
+
+         @media (max-width: 700px) {
+            margin-bottom: 15px;
+         }
 
          >input {
             width: 100%;
@@ -894,7 +920,7 @@ body._lock {
       transform: translateY(-50%);
       cursor: text;
       position: absolute;
-      width: 100%;
+
       display: none;
       color: #FFF;
       font-size: 18px;
@@ -902,11 +928,75 @@ body._lock {
       font-weight: 400;
       color: #ffffff;
 
+
       >span {
          font-family: Arial;
          font-size: 16px;
          color: #ff4444;
       }
+   }
+
+   &__message {
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 30px;
+
+      @media (max-width: 500px) {
+         margin-bottom: 10px;
+      }
+
+      >textarea {
+         width: 100%;
+         height: 200px;
+         background: #273a71;
+         outline: none;
+         border: none;
+         border-radius: 5px;
+         padding: 25px;
+         font-size: 18px;
+         line-height: 18px;
+         font-weight: 400;
+         color: #ffffff;
+
+      }
+
+      >textarea:invalid+.blue-section__input-text {
+         display: inline;
+         color: rgba(255, 255, 255, 0.734)
+      }
+
+      >.blue-section__input-text {
+         z-index: 10;
+         left: 25px;
+         top: 33px;
+
+         cursor: text;
+         position: absolute;
+         display: none;
+         color: #FFF;
+         font-size: 18px;
+         line-height: 18px;
+         font-weight: 400;
+         color: #ffffff;
+
+         >span {
+            font-family: Arial;
+            font-size: 16px;
+            color: #ff4444;
+         }
+      }
+   }
+
+   &__button {
+
+      >button {
+         display: block;
+         outline: none;
+         border: none;
+         cursor: pointer;
+      }
+
    }
 }
 
@@ -962,6 +1052,10 @@ body._lock {
       font-size: 16px;
    }
 
+   @media (max-width: 500px) {
+      padding: 20px 20px;
+   }
+
 }
 
 ._orange {
@@ -974,6 +1068,12 @@ body._lock {
    background: $green-color-btn;
    border-radius: 5px;
    border-bottom: 5px solid #14a58c;
+}
+
+._blue {
+   background: $blue-color-btn;
+   border-radius: 5px;
+   border-bottom: 5px solid #299ec5 !important;
 }
 
 .caption {

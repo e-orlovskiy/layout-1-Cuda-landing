@@ -788,7 +788,7 @@ body._lock {
 
 @media (max-width: 500px) {
   .gold-section__link {
-    padding: 8px 20px;
+    padding: 5px 10px;
     font-size: 16px;
   }
 }
@@ -869,6 +869,12 @@ body._lock {
   letter-spacing: 0.02em;
   color: #393939;
   text-align: center;
+}
+
+@media (max-width: 500px) {
+  .gold-section__work-title {
+    font-size: 16px;
+  }
 }
 
 .gold-section__button {
@@ -1059,6 +1065,12 @@ body._lock {
   }
 }
 
+@media (max-width: 767px) {
+  .pink-section__comment {
+    font-size: 16px;
+  }
+}
+
 .pink-section__name {
   font-size: 24px;
   line-height: 26px;
@@ -1105,6 +1117,18 @@ body._lock {
   padding: 120px 0;
 }
 
+@media (max-width: 1024px) {
+  .blue-section__container {
+    padding: 120px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blue-section__container {
+    padding: 50px 20px 30px 20px;
+  }
+}
+
 .blue-section__caption {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1117,6 +1141,12 @@ body._lock {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 75px;
+}
+
+@media (max-width: 500px) {
+  .blue-section__caption {
+    margin-bottom: 40px;
+  }
 }
 
 .blue-section__form {
@@ -1146,10 +1176,26 @@ body._lock {
   margin-bottom: 25px;
 }
 
+@media (max-width: 700px) {
+  .blue-section__name-and-email {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 0;
+  }
+}
+
 .blue-section__name-and-email > label {
   width: 100%;
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .blue-section__name-and-email > label {
+    margin-bottom: 15px;
+  }
 }
 
 .blue-section__name-and-email > label > input {
@@ -1181,7 +1227,6 @@ body._lock {
           transform: translateY(-50%);
   cursor: text;
   position: absolute;
-  width: 100%;
   display: none;
   color: #FFF;
   font-size: 18px;
@@ -1194,6 +1239,65 @@ body._lock {
   font-family: Arial;
   font-size: 16px;
   color: #ff4444;
+}
+
+.blue-section__message {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 500px) {
+  .blue-section__message {
+    margin-bottom: 10px;
+  }
+}
+
+.blue-section__message > textarea {
+  width: 100%;
+  height: 200px;
+  background: #273a71;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 25px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.blue-section__message > textarea:invalid + .blue-section__input-text {
+  display: inline;
+  color: rgba(255, 255, 255, 0.734);
+}
+
+.blue-section__message > .blue-section__input-text {
+  z-index: 10;
+  left: 25px;
+  top: 33px;
+  cursor: text;
+  position: absolute;
+  display: none;
+  color: #FFF;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.blue-section__message > .blue-section__input-text > span {
+  font-family: Arial;
+  font-size: 16px;
+  color: #ff4444;
+}
+
+.blue-section__button > button {
+  display: block;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 .header__container {
@@ -1242,6 +1346,12 @@ body._lock {
   }
 }
 
+@media (max-width: 500px) {
+  .button {
+    padding: 20px 20px;
+  }
+}
+
 ._orange {
   background: #eb7d4b;
   border-radius: 5px;
@@ -1252,6 +1362,12 @@ body._lock {
   background: #17c2a4;
   border-radius: 5px;
   border-bottom: 5px solid #14a58c;
+}
+
+._blue {
+  background: #30bae7;
+  border-radius: 5px;
+  border-bottom: 5px solid #299ec5 !important;
 }
 
 .caption__title {
