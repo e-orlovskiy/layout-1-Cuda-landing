@@ -12,11 +12,6 @@ div {
           box-sizing: border-box;
 }
 
-ul li {
-  list-style: none;
-  text-transform: uppercase;
-}
-
 a {
   text-decoration: none;
   color: #fff;
@@ -770,6 +765,11 @@ body._lock {
   max-width: 420px;
 }
 
+.gold-section__list > li {
+  list-style: none;
+  text-transform: uppercase;
+}
+
 .gold-section__list > li:not(:last-child) {
   margin-right: 10px;
 }
@@ -1129,6 +1129,12 @@ body._lock {
   }
 }
 
+@media (max-width: 500px) {
+  .blue-section__container {
+    padding: 50px 20px 10px 20px;
+  }
+}
+
 .blue-section__caption {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1266,6 +1272,7 @@ body._lock {
   line-height: 18px;
   font-weight: 400;
   color: #ffffff;
+  position: relative;
 }
 
 .blue-section__message > textarea:invalid + .blue-section__input-text {
@@ -1298,6 +1305,95 @@ body._lock {
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+.footer {
+  background: #344b8e;
+  width: 100%;
+}
+
+.footer__list {
+  max-width: 940px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 45px 0 45px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .footer__list {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 45px 40px 45px 40px;
+  }
+}
+
+.footer__list > li {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  list-style: none;
+}
+
+.footer__list > li .footer__logo {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .footer__list > li .footer__logo {
+    display: block;
+  }
+}
+
+.footer__list > li .footer__text {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .footer__list > li .footer__text {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer__list > li {
+    line-height: 0;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__list > li {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer__list > li {
+    font-size: 22px;
+  }
+}
+
+.footer__list > li:not(:last-child) {
+  margin-right: 55px;
+}
+
+@media (max-width: 1024px) {
+  .footer__list > li:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__list > li:not(:last-child) {
+    margin-right: none;
+  }
 }
 
 .header__container {
@@ -1552,6 +1648,8 @@ body._lock {
 
 .menu__list li {
   position: relative;
+  list-style: none;
+  text-transform: uppercase;
 }
 
 .menu__list li:not(:last-child) {
