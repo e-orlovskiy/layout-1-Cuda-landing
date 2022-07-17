@@ -1273,6 +1273,7 @@ body._lock {
   font-weight: 400;
   color: #ffffff;
   position: relative;
+  resize: none;
 }
 
 .blue-section__message > textarea:invalid + .blue-section__input-text {
@@ -1291,7 +1292,6 @@ body._lock {
   font-size: 18px;
   line-height: 18px;
   font-weight: 400;
-  color: #ffffff;
 }
 
 .blue-section__message > .blue-section__input-text > span {

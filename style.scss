@@ -904,7 +904,7 @@ body._lock {
 
          >input:invalid+.blue-section__input-text {
             display: inline;
-            color: rgba(255, 255, 255, 0.734)
+            color: rgba(255, 255, 255, 0.734);
          }
 
 
@@ -922,14 +922,12 @@ body._lock {
       transform: translateY(-50%);
       cursor: text;
       position: absolute;
-
       display: none;
       color: #FFF;
       font-size: 18px;
       line-height: 18px;
       font-weight: 400;
       color: #ffffff;
-
 
       >span {
          font-family: Arial;
@@ -961,19 +959,18 @@ body._lock {
          font-weight: 400;
          color: #ffffff;
          position: relative;
-      }
+         resize: none;
 
-
-      >textarea:invalid+.blue-section__input-text {
-         display: inline;
-         color: rgba(255, 255, 255, 0.734)
+         &:invalid+.blue-section__input-text {
+            display: inline;
+            color: rgba(255, 255, 255, 0.734);
+         }
       }
 
       >.blue-section__input-text {
          z-index: 10;
          left: 25px;
          top: 33px;
-
          cursor: text;
          position: absolute;
          display: none;
@@ -981,7 +978,6 @@ body._lock {
          font-size: 18px;
          line-height: 18px;
          font-weight: 400;
-         color: #ffffff;
 
          >span {
             font-family: Arial;
@@ -989,6 +985,7 @@ body._lock {
             color: #ff4444;
          }
       }
+
    }
 
    &__button {
