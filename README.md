@@ -1,4 +1,4 @@
-# layout-1-Cuda-landing </br> [Вёрстка простого сайта с адаптивным меню-бургером]
+# layout-1-Cuda-landing </br> [Верстка #1. Лэндинг]
 
 ![markdown logo](https://mir-s3-cdn-cf.behance.net/projects/404/d8683091518749.Y3JvcCwxNzAwLDEzMjksMCww.jpg)
 
